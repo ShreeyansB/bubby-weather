@@ -1,16 +1,22 @@
-const keys = require('./keys.js')
 const got = require('got')
+const geocode = require('./geocode.js')
+const forecast = require('./forecast.js')
 
-const url = 'http://api.weatherstack.com/current?access_key=' + keys.weatherStackAPIKey + '&query=mumbai'
-
-var getData = async function () {
+async function getWeather() {
   try {
-    const response = await got(url, {responseType: 'json'})
-    const data = (response.body)
-    console.log('It is currently ' + data.current.temperature + ' degrees. It feels like ' + data.current.feelslike + ' degrees out.');
+    const response = await got(weatherUrl, { responseType: 'json' })
+    const data = response.body
+    if (data.error) {
+      console.log(data.error.info);
+    }
+    console.log(data.current.weather_descriptions[0] + '. It is currently ' + data.current.temperature + '°C. It feels like ' + data.current.feelslike + '°C out.');
   } catch (error) {
-    console.log(error.response.body);
+    console.log('Unable to connect to weather service');
   }
 }
 
-getData() 
+
+geocode.get('dahmi kalan').then((data) => {
+  console.log(data)
+  forecast.get(data).then((data) => console.log(data))
+})
