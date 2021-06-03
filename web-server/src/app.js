@@ -1,6 +1,8 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const geocode = require('./geocode.js')
+const forecast = require('./forecast.js')
 
 const app = express()
 
@@ -38,14 +40,18 @@ app.get('/about', (req, res) => {
 
 
 app.get('/weather', (req, res) => {
-  console.log(req.query)
-  res.send({
-    title: 'Weather API'
-  })
+  if (!req.query.address) {
+    res.send({ error: 'Address not provided' })
+  } else {
+    var result = {}
+    geocode.get(req.query.address).then((data) => {
+      forecast.get(data).then((data) => res.send(data))
+    })
+  }
 })
 
 // 404 page - should be last route
-app.get('*', (req,res) => {
+app.get('*', (req, res) => {
   res.render('404')
 })
 
