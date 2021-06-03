@@ -43,6 +43,7 @@ app.get('/weather', (req, res) => {
   })
 })
 
+// 404 page - should be last route
 app.get('*', (req,res) => {
   res.render('404')
 })
