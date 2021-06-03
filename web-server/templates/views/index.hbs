@@ -7,15 +7,35 @@
   <link rel="icon" href="/img/favicon.png">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <script src="/js/app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   {{>header}}
+
+  <div class="container mt-5 py-2">
+    <h1 class="text-light">Use this site<br> to get your weather!</h2>
+      <div class="row text-light mt-5">
+        <div class="col col-12 col-lg-6">
+          <form>
+            <fieldset>
+              <div class="mb-3">
+                <label for="inputAddress" class="form-label ms-1">Your Location:</label>
+                <input type="text" class="form-control form-control-lg bg-dark" placeholder="Enter your location" id="inputAddress" required="">
+              </div>
+              <button type="submit" class="btn btn-light fw-bold ms-1 float-start">SEARCH</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="col col-12 col-lg-6 mt-4 mt-lg-0" id="forecastCard">
+        </div>
+      </div>
+  </div>
+
   {{>footer}}
 
   <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/app.js"></script>
 </body>
 
 </html>

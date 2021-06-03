@@ -2,10 +2,6 @@ body {
   background-color: #15181b;
 }
 
-h1 {
-  color: gray;
-}
-
 .profile-pic {
   height: 10rem;
 }
@@ -21,4 +17,14 @@ h1 {
 .text-404 {
   font-weight: 600;
   font-size: 8rem;
+}
+
+#inputAddress {
+  color: white;
+  border-color: transparent;
+  max-width: 65%;
+}
+
+.form-label {
+  font-size: 1.5rem;
 }
