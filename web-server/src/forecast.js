@@ -6,12 +6,13 @@ const error = {
 }
 
 async function get(location) {
-
-  const weatherUrl = 'http://api.weatherstack.com/current?access_key=' + keys.weatherStackAPIKey + '&query=' + location.latitude + ',' + location.longitude
-
+  
   if(location === undefined) {
     return error
   }
+
+  const weatherUrl = 'http://api.weatherstack.com/current?access_key=' + keys.weatherStackAPIKey + '&query=' + location.latitude + ',' + location.longitude
+
 
   try {
     const response = await got(weatherUrl, { responseType: 'json' })
