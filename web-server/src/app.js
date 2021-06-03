@@ -38,7 +38,8 @@ app.get('/about', (req, res) => {
 
 
 app.get('/weather', (req, res) => {
-  res.send('Weather', {
+  console.log(req.query)
+  res.send({
     title: 'Weather API'
   })
 })

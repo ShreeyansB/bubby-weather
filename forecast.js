@@ -1,16 +1,24 @@
 const got = require('got')
 const keys = require('./keys.js')
 
+const error = {
+  error: 'API Request Failed'
+}
+
 async function get(location) {
 
   const weatherUrl = 'http://api.weatherstack.com/current?access_key=' + keys.weatherStackAPIKey + '&query=' + location.latitude + ',' + location.longitude
+
+  if(location === undefined) {
+    return error
+  }
 
   try {
     const response = await got(weatherUrl, { responseType: 'json' })
     const data = response.body
     if (data.error) {
       console.log(data.error.info);
-      return undefined
+      return error
     }
     const result = {
       location: {
@@ -27,7 +35,7 @@ async function get(location) {
     return result
   } catch (error) {
     console.log('Unable to connect to weather service');
-    return undefined
+    return error
   }
 }
 
