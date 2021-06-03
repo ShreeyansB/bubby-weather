@@ -17,3 +17,8 @@ h1 {
 #git-name {
   color: white;
 }
+
+.text-404 {
+  font-weight: 600;
+  font-size: 8rem;
+}
