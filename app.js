@@ -2,7 +2,6 @@ const got = require('got')
 const geocode = require('./geocode.js')
 const forecast = require('./forecast.js')
 
-console.log(process.argv)
 
 if (process.argv.slice(2).length === 0 || process.argv.slice(2).length > 1) {
   console.log('Enter single location in double quotes. Eg. node app.js "New York"')

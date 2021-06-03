@@ -20,7 +20,9 @@ async function get(location) {
       },
       forecast: data.current.weather_descriptions[0],
       temperature: data.current.temperature,
-      feelslike: data.current.feelslike
+      feelslike: data.current.feelslike,
+      humidity: data.current.humidity,
+      weather_icon: data.current.weather_icons
     }
     return result
   } catch (error) {
