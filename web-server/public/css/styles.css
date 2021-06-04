@@ -28,3 +28,22 @@ body {
 .form-label {
   font-size: 1.5rem;
 }
+
+#testCard {
+  background-color: #4f6bf8;
+  background-image: url('/img/wave.png');
+  background-size: cover;
+  border-radius: 0.8rem;
+}
+
+#weatherCardTemp {
+  font-size: 5.4rem;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.my-spinner {
+  height: 5rem;
+  width: 5rem;
+  border-width: 0.5rem;
+}

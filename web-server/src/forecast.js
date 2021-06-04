@@ -31,7 +31,7 @@ async function get(location) {
       temperature: data.current.temperature,
       feelslike: data.current.feelslike,
       humidity: data.current.humidity,
-      weather_icon: data.current.weather_icons
+      weatherIcon: data.current.weather_icons
     }
     return result
   } catch (error) {

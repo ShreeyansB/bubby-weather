@@ -16,18 +16,22 @@
   <div class="container mt-5 py-2">
     <h1 class="text-light">Use this site<br> to get your weather!</h2>
       <div class="row text-light mt-5">
-        <div class="col col-12 col-lg-6">
+        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
           <form>
             <fieldset>
               <div class="mb-3">
                 <label for="inputAddress" class="form-label ms-1">Your Location:</label>
-                <input type="text" class="form-control form-control-lg bg-dark" placeholder="Enter your location" id="inputAddress" required="">
+                <input type="text" class="form-control form-control-lg bg-dark" placeholder="Enter your location"
+                  id="inputAddress" required="">
               </div>
               <button type="submit" class="btn btn-light fw-bold ms-1 float-start">SEARCH</button>
             </fieldset>
           </form>
         </div>
-        <div class="col col-12 col-lg-6 mt-4 mt-lg-0" id="forecastCard">
+        {{!-- <div class="col col-12 col-lg-6 mt-4 mt-lg-0" id="forecastCard"> --}}
+          <div class="col-12 col-lg-6 mt-4 mt-lg-0 px-0 ps-3 pe-3 pe-md-5 pe-lg-0 pe-xxl-5" id="weatherCol">
+
+          </div>
         </div>
       </div>
   </div>
