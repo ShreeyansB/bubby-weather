@@ -13,6 +13,33 @@
 
 <body>
   {{>header}}
+  <div class="container text-light">
+    <div class="text-center mt-5">
+      <h1 class="display-1">Need Help?</h1>
+      <h3 class="display-6">Check below for more info</h3>
+    </div>
+    <div class="row mt-5 pt-4">
+      <div class="col col-1"></div>
+      <div class="col col-10">
+        <div class="list-group shadow-lg">
+          <div class="list-group-item bg-dark text-light px-3 pt-3">
+            <h4>What is this website made with?</h4>
+            <p>The frontend of this website is made with Bootstrap 5. Node.js is used at the backend. Handlebars is used to serve up dynamic webpages. A custom API is used to fetch the weather. Express.js hosts the website.</p>
+          </div>
+          <div class="list-group-item bg-dark text-light px-3 pt-3">
+            <h4>How does this work?</h4>
+            <p>The custom API made with Node.js finds the lat, lon coordinates of the location given by the user with MapBox API. The coordinates are then given to WeatherStack API to get the forecast.</p>
+          </div>
+          <div class="list-group-item bg-dark text-light px-3 pt-3">
+            <h4>Forecast no work?</h4>
+            <p>WeatherStack gives only 250 queries per month quota for using their API. So thats probably the reason, the API no work. Quota gets reset at the 1st of the month. Or you're just entering the a non-existent or obscure location.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-1"></div>
+    </div>
+  </div>
+
   {{>footer}}
 
   <script src="/js/bootstrap.bundle.min.js"></script>

@@ -3,7 +3,7 @@ body {
 }
 
 .profile-pic {
-  height: 10rem;
+  height: 15rem;
 }
 
 .img-brand {
@@ -46,4 +46,13 @@ body {
   height: 5rem;
   width: 5rem;
   border-width: 0.5rem;
+}
+
+a, u {
+  color: white;
+  text-decoration: none;
+}
+
+.my-link{
+  font-size: 1.2rem;
 }
