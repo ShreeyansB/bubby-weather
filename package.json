@@ -1,23 +1,16 @@
 {
-  "name": "bubby-weather",
+  "name": "web-server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ShreeyansB/bubby-weather.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ShreeyansB/bubby-weather/issues"
-  },
-  "homepage": "https://github.com/ShreeyansB/bubby-weather#readme",
   "dependencies": {
-    "got": "^11.8.2"
+    "express": "^4.17.1",
+    "hbs": "^4.1.2"
   }
 }
