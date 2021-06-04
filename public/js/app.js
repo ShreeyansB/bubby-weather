@@ -17,7 +17,6 @@ weatherForm.addEventListener('submit', (e) => {
         forecast.innerHTML = '<p>Location not found or API is down</p>'
       } else {
         forecast.innerHTML = getWeatherCard(data)
-        console.log(data)
       }
     })
   })
