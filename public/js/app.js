@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
   fetch('/weather?address=' + encodeURIComponent(location)).then((response) => {
     response.json().then((data) => {
       if (data.error) {
-        forecast.innerHTML = '<p>Location not found or API is down</p>'
+        forecast.innerHTML = '<p class="text-danger">Location not found or API is down</p>'
       } else {
         forecast.innerHTML = getWeatherCard(data)
       }
